@@ -15,6 +15,7 @@ Class.prototype.setOptions = function(options) {
         return dst; // return dst to allow method chaining
     }
     this.options = update(this.options, options);
+    this.emit("setOptions",this.options)
     return this.options;
 };
 Class.extend = function(props) {
